@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "out": "./app/scripts.js",
+    "sourceMap": true
+  },
+  "filesGlob": [
+    "./app/index.ts",
+    "./app/routes.ts",
+    "./app/**/*.ts",
+    "!./node_modules/**/*.ts"
+  ],
+  "files": [
+    "./app/index.ts",
+    "./app/routes.ts",
+    "./app/components/card/card.controller.ts",
+    "./app/components/card/card.directive.ts",
+    "./app/components/card/card.interfaces.ts",
+    "./app/helpers.ts",
+    "./app/interfaces.ts",
+    "./app/views/main.controller.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
+}

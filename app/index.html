@@ -1,0 +1,49 @@
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="styles/vendor-styles.min.css">
+
+  <link rel="stylesheet" href="styles/custom-styles.min.css">
+
+  <title>Hyrbyt</title>
+
+</head>
+
+<body ng-app="Hyrbyt">
+
+  <!-- Container -->
+
+  <div id="container" ng-controller="testCtrl as testC">
+
+    <div class="container">
+
+      <card-test></card-test>
+
+      dfsdsf
+      {{ testC.test }}
+      <ng-view></ng-view>
+
+    </div>
+
+    <br>
+
+  </div>
+
+  <!-- End Container -->
+
+  <!-- Scripts -->
+
+  <script src="scripts/vendor-scripts.min.js"></script>
+
+  <script src="scripts/custom-scripts.min.js"></script>
+
+</body>
+
+</html>

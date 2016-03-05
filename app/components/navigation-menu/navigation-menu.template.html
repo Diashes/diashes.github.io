@@ -1,0 +1,113 @@
+<!-- NAVIGATION -->
+
+<nav id="navigation">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-xs-12">
+
+        <a href="#" class="brand-logo">Hyrbyt</a>
+
+        <div class="menu-left">
+
+          <ul>
+
+            <li><a href="#" class="btn btn-default" ng-click="nav.showMenu = !nav.showMenu">Meny</a></li>
+
+          </ul>
+
+        </div>
+
+        <ul class="menu-right">
+
+          <li><a href="#" class="btn btn-default" ng-click="nav.showLogIn = !nav.showLogIn">Logga in</a></li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- LOG IN -->
+
+  <div class="login" ng-class="nav.showLogIn ? 'show' : 'hide'">
+
+    <div class="container">
+
+      <div class="row">
+
+        <form action="" class="group-inline">
+
+          <div class="col-xs-4">
+
+            <input type="text" class="form-control">
+
+          </div>
+
+          <div class="col-xs-4">
+
+            <input type="password" class="form-control">
+
+          </div>
+
+          <div class="col-xs-4">
+
+            <input type="submit" class="form-control">
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- MENY -->
+
+  <div class="menu" ng-class="nav.showMenu ? 'show' : 'hide'">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="left-menu col-xs-6">
+
+          <ul>
+
+            <li><a href="#">Startsida</a></li>
+
+            <li><a href="#">Om Hyrbyt</a></li>
+
+            <li><a href="#">Blogg</a></li>
+
+          </ul>
+
+        </div>
+
+        <div class="right-menu col-xs-6">
+
+          <ul>
+
+            <li><a href="#">Nyheter</a></li>
+
+            <li><a href="#">Logga in</a></li>
+
+            <li><a href="#">Skapa konto</a></li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</nav>
