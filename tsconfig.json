@@ -1,29 +1,17 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "noImplicitAny": true,
+    "target": "es5",
+    "module": "system",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "removeComments": false,
-    "preserveConstEnums": true,
-    "out": "./app/scripts.js",
-    "sourceMap": true
+    "noImplicitAny": false
   },
-  "filesGlob": [
-    "./app/index.ts",
-    "./app/routes.ts",
-    "./app/**/*.ts",
-    "!./node_modules/**/*.ts"
-  ],
-  "files": [
-    "./app/index.ts",
-    "./app/routes.ts",
-    "./app/components/card/card.controller.ts",
-    "./app/components/card/card.directive.ts",
-    "./app/components/card/card.interfaces.ts",
-    "./app/helpers.ts",
-    "./app/interfaces.ts",
-    "./app/views/main.controller.ts"
-  ],
-  "atom": {
-    "rewriteTsconfig": true
-  }
+  "exclude": [
+    "node_modules",
+    "typings/main",
+    "typings/main.d.ts"
+  ]
 }

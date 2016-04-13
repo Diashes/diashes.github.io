@@ -10,7 +10,9 @@ var minifyCSS = require('gulp-minify-css');     // Minify the CSS.
 var sass = require('gulp-sass');                // Compiles Sass to CSS.
 
 
-// CUSTOM //////////////////////////////////////////////////////////////////////
+/*******************************************************************************
+ * Custom
+ */
 
 gulp.task('html', function () {
   return gulp.src('./app/**/*.html')
@@ -46,7 +48,9 @@ gulp.task('custom-scripts', function() {
 });
 
 
-// VENDOR //////////////////////////////////////////////////////////////////////
+/*******************************************************************************
+ * Vendor
+ */
 
 gulp.task('vendor-styles', function () {
   return gulp.src(['./node_modules/bootstrap/dist/css/bootstrap.min.css',
@@ -66,8 +70,9 @@ gulp.task('vendor-scripts', function() {
 });
 
 
-// TASKS ///////////////////////////////////////////////////////////////////////
-
+/*******************************************************************************
+ * Tasks
+ */
 
 gulp.task('default', [
   'html',
