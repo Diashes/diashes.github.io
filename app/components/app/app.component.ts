@@ -4,4 +4,9 @@ import {Component} from 'angular2/core';
   selector: 'app',
   templateUrl: 'app.component.html'
 })
-export class AppComponent {}
+
+export class AppComponent {
+  constructor() {
+    console.log("Hello");
+  }
+}

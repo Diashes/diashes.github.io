@@ -33,7 +33,7 @@ gulp.task('styles', function () {
     .pipe(sass())
     .pipe(concat('generated.css'))
     .pipe(minifyCSS())
-    .pipe(gulp.dest('./app'));
+    .pipe(gulp.dest('./app/generated'));
 });
 
 
