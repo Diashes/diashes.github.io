@@ -1,49 +1,38 @@
 <html>
-
 <head>
-
-  <meta charset="utf-8">
-
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+  <title>Diashes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="generated.css">
 
-  <link rel="stylesheet" href="styles/vendor-styles.min.css">
+  <!-- 1. Load libraries -->
+  <!-- IE required polyfills, in this exact order -->
+  <script src="/node_modules/es6-shim/es6-shim.min.js"></script>
+  <script src="/node_modules/systemjs/dist/system-polyfills.js"></script>
+  <script src="/node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
 
-  <link rel="stylesheet" href="styles/custom-styles.min.css">
+  <script src="/node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="/node_modules/systemjs/dist/system.src.js"></script>
+  <script src="/node_modules/rxjs/bundles/Rx.js"></script>
+  <script src="/node_modules/angular2/bundles/angular2.dev.js"></script>
 
-  <title>Hyrbyt</title>
+  <!-- 2. Configure SystemJS -->
+  <script>
+    System.config({
+      packages: {
+        app: {
+          format: 'register',
+          defaultExtension: 'js'
+        }
+      }
+    });
+    System.import('generated')
+      .then(null, console.error.bind(console));
+  </script>
 
 </head>
+<body>
 
-<body ng-app="Hyrbyt">
-
-  <!-- Container -->
-
-  <div id="container" ng-controller="testCtrl as testC">
-
-    <div class="container">
-
-      <card-test></card-test>
-
-      dfsdsf
-      {{ testC.test }}
-      <ng-view></ng-view>
-
-    </div>
-
-    <br>
-
-  </div>
-
-  <!-- End Container -->
-
-  <!-- Scripts -->
-
-  <script src="scripts/vendor-scripts.min.js"></script>
-
-  <script src="scripts/custom-scripts.min.js"></script>
+<app>Loading...</app>
 
 </body>
-
 </html>

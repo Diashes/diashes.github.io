@@ -7,13 +7,17 @@
     "test": "test"
   },
   "dependencies": {
-    "angular": "^1.5.0",
-    "angular-route": "^1.5.0",
+    "angular2": "^2.0.0-beta.15",
     "bootstrap": "^3.3.6",
+    "es6-shim": "^0.35.0",
     "jquery": "^2.2.1",
-    "material-design-icons": "^2.2.0"
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "systemjs": "^0.19.26",
+    "zone.js": "^0.6.11"
   },
   "devDependencies": {
+    "concurrently": "^2.0.0",
     "connect": "^3.4.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
@@ -25,11 +29,15 @@
     "gulp-sass": "^2.2.0",
     "gulp-strip-debug": "^1.1.0",
     "gulp-uglify": "^1.5.3",
-    "serve-static": "^1.10.2"
+    "serve-static": "^1.10.2",
+    "typescript": "^1.8.10",
+    "typings": "^0.7.12"
   },
   "scripts": {
-    "test": "test",
-    "start": "node server.js"
+    "start": "tsc && concurrently \"gulp sass\" \"tsc -w\" \"node server.js\"",
+    "server": "node server.js",
+    "compilers": "concurrently \"gulp sass\" \"tsc -w\"",
+    "test": "test"
   },
   "repository": {
     "type": "git",

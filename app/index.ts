@@ -1,7 +1,4 @@
-/// <reference path="_references.d.ts"/>
+import {bootstrap} from 'angular2/platform/browser';
+import {AppComponent} from './components/app/app.component';
 
-console.log('wadsaf');
-
-angular.module('Hyrbyt', [ 'ngRoute' ]);
-
-  // .directive('cardTest', function() { return { template: 'directive' }});
+bootstrap(AppComponent);

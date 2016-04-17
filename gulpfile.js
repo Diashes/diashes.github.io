@@ -13,36 +13,34 @@ var sass = require('gulp-sass');                // Compiles Sass to CSS.
 // CUSTOM //////////////////////////////////////////////////////////////////////
 
 gulp.task('html', function () {
-  return gulp.src('./app/**/*.html')
-    .pipe(changed('./build/'))
+  return gulp.src('/app/**/*.html')
+    .pipe(changed('/build'))
     .pipe(minifyHTML())
-    .pipe(gulp.dest('./build/'));
+    .pipe(gulp.dest('/build'));
 });
 
 
 gulp.task('images', function() {
-  return gulp.src('./app/images/**/*')
-    .pipe(changed('./build/images/'))
+  return gulp.src('/app/images/**/*')
+    .pipe(changed('/build/images/'))
     .pipe(imagemin())
-    .pipe(gulp.dest('./build/images/'));
+    .pipe(gulp.dest('/build/images/'));
 });
 
 
-gulp.task('custom-styles', function () {
-  return gulp.src('./app/**/*.scss')
+gulp.task('styles', function () {
+  return gulp.src('./app/**.scss')
     .pipe(sass())
-    .pipe(concat('custom-styles.min.css'))
+    .pipe(concat('generated.css'))
     .pipe(minifyCSS())
-    .pipe(gulp.dest('./build/styles/'));
+    .pipe(gulp.dest('./app'));
 });
 
 
-gulp.task('custom-scripts', function() {
-  return gulp.src('./app/scripts.js')
-    .pipe(concat('custom-scripts.min.js'))
-    //.pipe(stripDebug())
-    //.pipe(uglify())
-    .pipe(gulp.dest('./build/scripts/'));
+gulp.task('scripts', function() {
+  return gulp.src('/app/generated.js')
+    .pipe(concat('generated.min.js'))
+    .pipe(gulp.dest('/build'));
 });
 
 
@@ -68,37 +66,41 @@ gulp.task('vendor-scripts', function() {
 
 // TASKS ///////////////////////////////////////////////////////////////////////
 
-
 gulp.task('default', [
   'html',
   'images',
+  'styles',
+  'scripts',
   'vendor-styles',
-  'custom-styles',
-  'vendor-scripts',
-  'custom-scripts'
-  ]);
+  'vendor-scripts'
+]);
+
+gulp.task('sass', [ 'styles' ], function() {
+  gulp.watch('./app/**.scss', function() {
+    gulp.run('styles');
+  });
+});
 
 
 gulp.task('watch', [
   'html',
   'images',
+  'styles',
+  'scripts',
   'vendor-styles',
-  'custom-styles',
-  'vendor-scripts',
-  'custom-scripts'
+  'vendor-scripts'
   ],
-
   function() {
-    gulp.watch('./app/**/*.html', function() { // watch for HTML changes
+    gulp.watch('./app/**/*.html', function() {
       gulp.run('html');
     });
-    gulp.watch('./app/scripts.js', function() { // watch for JS changes
-      gulp.run('custom-scripts');
+    gulp.watch('./app/scripts.js', function() {
+      gulp.run('scripts');
     });
-    gulp.watch('./app/**/*.scss', function() { // watch for CSS changes
-      gulp.run('custom-styles');
+    gulp.watch('./app/**/*.scss', function() {
+      gulp.run('styles');
     });
-    gulp.watch('./app/images/**/*', function() { // watch for image changes
+    gulp.watch('./app/images/**/*', function() {
       gulp.run('images');
     });
 });
