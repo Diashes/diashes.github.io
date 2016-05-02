@@ -3,4 +3,9 @@
 /.tmp
 /.sass-cache
 /bower_components
+<<<<<<< HEAD
 /typings
+=======
+.idea
+.DS_Store
+>>>>>>> ad806263e4a94cbf3233ff1877090c951bf9fcd3
