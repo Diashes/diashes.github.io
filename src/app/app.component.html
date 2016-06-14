@@ -1,0 +1,74 @@
+<pre>
+<h1>Introduction to Angular 2</h1>
+
+<h2>What is Angular 2?</h2>
+- A framework to help build client applications in HTML and JavaScript.
+
+<h2>The 8 main building blocks of Angular 2</h2>
+- Module
+- Component
+- Template
+- Metadata
+- Data Binding
+- Directive
+- Service
+- Dependency Injection
+
+<img src="https://angular.io/resources/images/devguide/architecture/overview2.png" />
+
+<h2>The Module</h2>
+- Angular apps are modular
+- Assembled from many modules
+
+A module is a block of code dedicated to a single purpose.
+A module exports something of value, typically a class.
+Modules export things — classes, function, values — that other modules import.
+
+<img src="https://angular.io/resources/images/devguide/architecture/module.png" alt="">
+
+Modules are optional - don't use it if you don't want it.
+Modular design is highly recommended.
+Easy to implement with TypeScript.
+
+<h2>Library Modules</h2>
+Some modules are libraries of other modules.
+Angular ships as a collection of library modules.
+<img src="https://angular.io/resources/images/devguide/architecture/library-module.png" alt="">
+Each library contains a barrel module that is a public facade over several private modules.
+The @angular/core library is the primary library module from which we get most functionality.
+Other important Angular libraries are @angular/common, @angular/router, @angular/http.
+<code>
+  import { Component } from '@angular/core';
+</code>
+The Angular Team prefer to write our application as a collection of modules, each module exporting one thing.
+
+<h2>Component</h2>
+Component is one of the basic Angular blocks, frequently used.
+Components are exported from modules.
+Component controls views - eg. navigation links, lists, forms, text.
+The Components application logic of the view is stored inside a class.
+The Component class interacts with the view through an API of properties and methods.
+
+app/hero-list.component.ts
+<code>
+  export class HeroListComponent implements OnInit 
+  {  
+    constructor( private service: HeroService ) { }
+    
+    heroes: Hero[];
+    selectedHero: Hero;
+
+    ngOnInit() { this.heroes = this.service.getHeroes(); }
+    selectHero(hero: Hero) { this.selectedHero = hero; }
+  }
+</code>
+
+Angular creates, updates and destroys components as the user moves though the application.
+Lifecycle Hooks can be used to manually edit this flow.
+
+Angular Template Syntax:
+
+
+<h2>Webpack</h2>
+Recommended to use a module loader.
+</pre>
