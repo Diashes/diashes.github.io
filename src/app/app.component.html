@@ -1,74 +1,98 @@
-<pre>
-<h1>Introduction to Angular 2</h1>
-
-<h2>What is Angular 2?</h2>
-- A framework to help build client applications in HTML and JavaScript.
-
-<h2>The 8 main building blocks of Angular 2</h2>
-- Module
-- Component
-- Template
-- Metadata
-- Data Binding
-- Directive
-- Service
-- Dependency Injection
-
-<img src="https://angular.io/resources/images/devguide/architecture/overview2.png" />
-
-<h2>The Module</h2>
-- Angular apps are modular
-- Assembled from many modules
-
-A module is a block of code dedicated to a single purpose.
-A module exports something of value, typically a class.
-Modules export things — classes, function, values — that other modules import.
-
-<img src="https://angular.io/resources/images/devguide/architecture/module.png" alt="">
-
-Modules are optional - don't use it if you don't want it.
-Modular design is highly recommended.
-Easy to implement with TypeScript.
-
-<h2>Library Modules</h2>
-Some modules are libraries of other modules.
-Angular ships as a collection of library modules.
-<img src="https://angular.io/resources/images/devguide/architecture/library-module.png" alt="">
-Each library contains a barrel module that is a public facade over several private modules.
-The @angular/core library is the primary library module from which we get most functionality.
-Other important Angular libraries are @angular/common, @angular/router, @angular/http.
-<code>
-  import { Component } from '@angular/core';
-</code>
-The Angular Team prefer to write our application as a collection of modules, each module exporting one thing.
-
-<h2>Component</h2>
-Component is one of the basic Angular blocks, frequently used.
-Components are exported from modules.
-Component controls views - eg. navigation links, lists, forms, text.
-The Components application logic of the view is stored inside a class.
-The Component class interacts with the view through an API of properties and methods.
-
-app/hero-list.component.ts
-<code>
-  export class HeroListComponent implements OnInit 
-  {  
-    constructor( private service: HeroService ) { }
-    
-    heroes: Hero[];
-    selectedHero: Hero;
-
-    ngOnInit() { this.heroes = this.service.getHeroes(); }
-    selectHero(hero: Hero) { this.selectedHero = hero; }
+<!--
+STYLES
+-->
+<style>
+  * {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
   }
-</code>
 
-Angular creates, updates and destroys components as the user moves though the application.
-Lifecycle Hooks can be used to manually edit this flow.
-
-Angular Template Syntax:
-
-
-<h2>Webpack</h2>
-Recommended to use a module loader.
-</pre>
+  nav {
+    background-color: lightgray;
+  }
+</style>
+<!--
+WRAPPER
+-->
+<section>
+  <!--
+  NAVIGATION
+  -->
+  <nav>
+    <div class="container">
+      <h1>Publit</h1>
+      <a href="">Hjälp</a>
+      <a href="">Hem</a>
+      <a href="">Blogg</a>
+      <a href="">Logga in</a>
+    </div>
+  </nav>
+  <!--
+  CONTENT
+  -->
+  <section class="container">
+    <!--
+    How to
+    -->
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Du skriver boken, vi sköter resten!</h2>
+      </div>
+      <div class="col-sm-4">
+        <h3>Ladda upp din färdiga bok</h3>
+        Du kan välja att ladda upp din bok som tryckt bok, ebok eller ljudbok!
+        <button>Läs mer</button>
+      </div>
+      <div class="col-sm-4">
+        <h3>Välj vart du vill sälja din bok</h3>
+        Publicera din bok hos någon av våra populära återförsäljare,
+        öppna din egen webb-bokhandel eller beställ hem din bok själv!
+        <button>Läs mer</button>
+      </div>
+      <div class="col-sm-4">
+        <h3>Publicera!</h3>
+        När du tryckt på publicera-knappen så ser till att din bok automatiskt 
+        dyker upp på valda försäljningskanaler.
+        När någon köper din bok så ser vi till att boken trycks och transporteras
+        eller skickas elektroniskt direkt till din slutkund!
+        <button>Läs mer</button>
+      </div>
+    </div>
+    <!--
+    Prices
+    -->
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Priser</h2>
+      </div>
+      <div class="col-sm-4">
+        <h3>Standard - 0 kr / månaden</h3>
+        <ul>
+          <li>Din egen webb-bokhandel</li>
+          <li>Kataloghantering av böcker</li>
+          <li>Statistikverktyg</li>
+          <li>Tryckning av böcker*</li>
+          <li>Publicering av böcker*</li>
+          *Avgift tillkommer
+        </ul>
+        <button>Läs mer</button>
+      </div>
+      <div class="col-sm-4">
+        <h3>Avancerad - 500 kr / månaden</h3>
+        <ul>
+          <li>Avancerat statistikverktyg</li>
+          <li>Avancerad kataloghantering av böcker</li>
+          <li>Kampanjverktyg</li>
+          <li>Support</li>
+        </ul>
+        <button>Läs mer</button>
+      </div>
+    </div>
+  </section>
+  <!--
+  FOOTER
+  -->
+  <footer>
+  </footer>
+</section>
