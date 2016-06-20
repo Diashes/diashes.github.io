@@ -5,5 +5,5 @@ import '@angular/common';
 import '@angular/http';
 import '@angular/router-deprecated';
 import 'rxjs';
+import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap';
-import 'jquery';
