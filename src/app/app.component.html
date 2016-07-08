@@ -2,18 +2,30 @@
 WRAPPER
 -->
 <section class="container-fluid">
+
+
+
+
+
   <!--
   NAVIGATION
   -->
   <nav>
     <div class="container">
-      <h1>Publit</h1>
-      <a href="">Hjälp</a>
-      <a href="">Hem</a>
-      <a href="">Blogg</a>
-      <a href="">Logga in</a>
+      <br><br><br><br><br><br>
+      <div class="text-center">
+        <h1>Publit</h1>
+        <br><br><br>
+        <button class="btn btn-default">Skapa konto gratis!</button>
+      </div>
+      <br><br><br><br><br><br><br><br><br>
     </div>
   </nav>
+
+
+
+
+
   <!--
   CONTENT
   -->
@@ -23,68 +35,158 @@ WRAPPER
     -->
     <div class="row">
       <div class="col-sm-12">
-        <h2>Du skriver boken, vi sköter resten!</h2>
+        <br><br>
+        <h2 class="text-center">Du skriver boken, vi sköter resten!</h2>
+        <br><br>
       </div>
-      <div class="col-sm-4">
-        <img src="" alt="">
+
+
+
+
+
+      <div class="col-sm-3 text-center">
+        <img src="/images/notebook.svg" alt="" height="100">
         <h3>Ladda upp din färdiga bok</h3>
         Du kan välja att ladda upp din bok som tryckt bok, ebok eller ljudbok!
-        <button>Läs mer</button>
+        <br><br>
+        <button class="btn btn-default">Läs mer</button>
       </div>
-      <div class="col-sm-4">
-        <img src="" alt="">
+
+
+
+
+
+
+      <div class="col-sm-3 text-center">
+        <img src="/images/notebook.svg" alt="" height="100">
         <h3>Välj vart du vill sälja din bok</h3>
         Publicera din bok hos någon av våra populära återförsäljare,
         öppna din egen webb-bokhandel eller beställ hem din egen bok!
-        <button>Läs mer</button>
+        <br><br>
+        <button class="btn btn-default">Läs mer</button>
       </div>
-      <div class="col-sm-4">
-        <img src="" alt="">
+
+
+
+
+      <div class="col-sm-3 text-center">
+        <img src="/images/notebook.svg" alt="" height="100">
         <h3>Publicera!</h3>
         När du tryckt på publicera-knappen så ser till att din bok automatiskt 
-        dyker upp på valda försäljningskanaler.
+        dyker upp hos valda återförsäljare.
         När någon köper din bok så ser vi till att boken trycks och transporteras
         eller skickas elektroniskt direkt till din slutkund!
-        <button>Läs mer</button>
+        <br><br>
+        <button class="btn btn-default">Läs mer</button>
       </div>
+
+
+
+
+
+      <div class="col-sm-3 text-center">
+        <img src="/images/notebook.svg" alt="" height="100">
+        <h3>Håll koll på hur mycket din bok säljer</h3>
+          Få en bra överblick över alla böcker som du sålt!
+        <br><br>
+        <button class="btn btn-default">Läs mer</button>
+      </div>
+
+
+
+
     </div>
+
+    <br><br>
+
     <!--
     Prices
     -->
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-12 text-center">
         <h2>Priser</h2>
+        <br>
       </div>
-      <div class="col-sm-4">
-        <h3>Standard - 0 kr / månaden</h3>
-        <ul>
-          <li>Din egen webb-bokhandel</li>
-          <li>Kataloghantering av böcker</li>
-          <li>Statistikverktyg</li>
-          <li>Tryckning av böcker*</li>
-          <li>Publicering av böcker*</li>
-          *Avgift tillkommer
-        </ul>
-        <button>Läs mer</button>
+      <div class="col-sm-offset-1 col-sm-5">
+        <div class="well">
+          <div class="text-center">
+            <h3>Standard</h3>
+            <h4>0 kr / månaden</h4>
+          </div>
+          <br>
+          <ul>
+            <li>Din egen webb-bokhandel</li>
+            <li>Kataloghantering av böcker</li>
+            <li>Statistikverktyg</li>
+            <li>Tryckning av böcker*</li>
+            <li>Publicering av böcker*</li>
+            *Avgift tillkommer
+          </ul>
+          <br>
+          <div class="text-center">
+            <button class="btn btn-default">Läs mer</button>
+          </div>
+        </div>
       </div>
-      <div class="col-sm-4">
-        <h3>Avancerad - 500 kr / månaden</h3>
-        <ul>
-          <li>Avancerat statistikverktyg</li>
-          <li>Avancerad kataloghantering av böcker</li>
-          <li>Kampanjverktyg</li>
-          <li>Support</li>
-        </ul>
-        <button>Läs mer</button>
+      <div class="col-sm-5">
+        <div class="well">
+          <div class="text-center">
+            <h3>Avancerad</h3>
+            <h4>500 kr / månaden</h4>
+          </div>
+          <br>
+          <ul>
+            <li>Avancerat statistikverktyg</li>
+            <li>Avancerad kataloghantering av böcker</li>
+            <li>Kampanjverktyg</li>
+            <li>Support</li>
+          </ul>
+          <br>
+          <div class="text-center">
+            <button class="btn btn-default">Läs mer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <br><br>
+
+    <!--
+    Calculator
+    -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="text-center">
+          <h2>Hur mycket kostar boken?</h2>
+          <br>
+        </div>
+        <input type="text" placeholder="Hårdband, mjukband eller pocket?">
+        <input type="text" placeholder="Hur många sidor?">¨
+        <input type="text" placeholder="Vilken papperstyp?">
+        <button class="btn btn-default">Beräkna pris</button>
       </div>
     </div>
   </section>
+
+
+<br><br><br><br>
+
+
   <!--
   FOOTER
   -->
   <footer>
     <div class="container">
+      <div>Icons made by 
+        <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+      </div>
       Footer
     </div>
   </footer>
+
+
+
+
 </section>
